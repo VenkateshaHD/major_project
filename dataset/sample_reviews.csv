@@ -1,0 +1,11 @@
+review_text,label
+"This product is amazing, completely changed my life! Highly recommend it.",OR
+"Terrible quality, broke after one use. Do not buy.",OR
+"Decent product for the price. Not the best but gets the job done.",OR
+"I absolutely love this item. It is the best thing I have ever bought.",CG
+"Do not purchase this. It is a complete scam and waste of money.",CG
+"Five stars! The most wonderful experience ever.",CG
+"Very average. Nothing special.",OR
+"I received this for free in exchange for a review. It's okay.",CG
+"This is the worst product. Avoid at all costs.",OR
+"Absolutely fantastic, I bought three more for my friends!",CG
