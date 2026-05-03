@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustLens - AI Fake Review Detection</title>
+    <meta name="description" content="Detect fake product reviews using state-of-the-art Transformer models.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="index.html">TrustLens</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Detector</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5 fade-in">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold" style="font-size: 3rem;">AI-Powered <span style="color: var(--secondary);">Review Truth</span></h1>
+            <p class="text-muted fs-5">Identify fake product reviews instantly using fine-tuned BERT models.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Direct Text Check -->
+            <div class="col-lg-6">
+                <div class="glass-card h-100">
+                    <h3 class="mb-4">Analyze Text</h3>
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label text-muted">Paste the review content here</label>
+                            <textarea class="form-control" id="reviewText" rows="5" placeholder="e.g. This product changed my life, totally amazing..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Detect Sentiment & Authenticity</button>
+                    </form>
+                    <div id="singleLoader" class="loader"></div>
+                    <div id="singleResult" class="text-center mt-3"></div>
+                </div>
+            </div>
+
+            <!-- Product Link Check -->
+            <div class="col-lg-6">
+                <div class="glass-card h-100">
+                    <h3 class="mb-4">Analyze Product Link</h3>
+                    <form id="urlForm">
+                        <div class="mb-3">
+                            <label for="productUrl" class="form-label text-muted">Enter Amazon or Flipkart URL</label>
+                            <input type="url" class="form-control py-3" id="productUrl" placeholder="https://www.amazon.com/dp/B08N5WRWNW" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Scrape & Analyze All Reviews</button>
+                    </form>
+                    <div id="urlLoader" class="loader"></div>
+                    <div id="urlResult" class="mt-3"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
